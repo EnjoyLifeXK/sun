@@ -1,0 +1,1092 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+		<meta charset="utf-8">
+		<meta http-equiv="cache-control" content="max-age=0">
+		<meta http-equiv="cache-control" content="no-cache">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+		<meta name="format-detection" content="telephone=no">
+<style>
+/*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
+.abd{
+	  width: 100%;
+}
+
+.img-wrap{
+	width: 100%;
+	float:left;
+}
+
+.img-wrap img{
+	border-top-left-radius: 30px;
+	border-top-right-radius: 30px;
+}
+
+.feeds-li{
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	width: 40%;
+	float:left;
+	text-align:center;
+	border-bottom: 5px solid #ff5983;
+	box-shadow: 0px 0px 10px #000000;
+	border-radius:30px ;
+}
+
+.title{
+	font-size: 30px;
+}
+
+.soso-search-input {
+	-moz-border-bottom-colors: none;
+	-moz-border-left-colors: none;
+	-moz-border-right-colors: none;
+	-moz-border-top-colors: none;
+	border-bottom-left-radius: 0px;
+	border-color: #ffffff currentcolor #ffffff #ffffff;
+	border-image: none;
+	border-style: solid none solid solid;
+	border-top-left-radius: 5px;
+	border-width: 1px medium 1px 1px;
+	float: left;
+	height: 36px;
+	line-height: 38px;
+	position: relative;
+	width: 70%;
+	z-index: 9;
+	/*新增属性*/
+	border: 2px solid;
+	border-radius:10px;
+	border-color:#ff5983;
+	background-color: #00000000;
+	color:#0BC3FC;
+}
+
+.soso-search-submit {
+	background-color: #ff5983;
+	border: 1px solid;
+	border-radius:10px;
+	border-color:#ff5983;
+	color: #fff;
+	cursor: pointer;
+	float: left;
+	font-family: simsun;
+	font-size: 14px;
+	font-weight: 700;
+	height: 43px;
+	width: 25%;
+}
+.title{
+	color: #ff5983;
+}
+
+html {
+	font-family: sans-serif;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%
+}
+
+body {
+	margin: 0;
+	background-color: #ffffff;
+}
+
+.position1 {
+	position: fixed;
+	width: 100%;
+	height: 50px;
+	padding-left: 10px;
+	bottom: 0;
+	z-index: 1000;
+}
+
+
+div, dl, form, h1, h2, h3, h4, h5, h6, ol, p, span, table, ul {
+	margin: 0;
+	padding: 0
+}
+
+ul {
+	list-style: none
+}
+</style>
+<!--<link rel="stylesheet"
+	href="https://pub.idqqimg.com/qqun/xiaoqu/mobile/css/common.min.fd126e84.css">
+<link rel="stylesheet"
+	href="https://pub.idqqimg.com/qqun/xiaoqu/mobile/css/barindex.min.60c2761b.css">-->
+	<!-- 新增jquery库 -->
+	<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+<title>太阳设计</title>
+<!-- 新增js代码,搜索功能 -->
+<script type="text/javascript">
+	$(function(){
+		$("input.soso-search-submit").click(function(){
+			//获取搜索框内容,正则表达式去掉所有空格
+			var $str = $("input#searchId").val().replace(/\s+/g, "");
+			//获取所有帖子标签元素li
+			var $lis = $("ul#tiezi-list li");
+			//若输入空值,则显示所有
+			if($str.length == 0){
+				$lis.show(500);
+			}else{
+				//索引i从0开始
+				$lis.each(function(i){
+					//获取当前li的标题文字
+					var $titleVal = $(this).find("span.title").text();
+					if($titleVal.indexOf($str) < 0){
+						$(this).hide(500);
+					}else{
+						$(this).show(500);
+					}
+				});
+			}
+		});
+	})
+</script>
+</head>
+<body class="android">
+	<div id="root">
+		<div class="PostList">
+			<ul class="scroll-view post-list position1" style="position: fixed;">
+				<li class="abd" style="padding-left: 0px;">
+					<input type="text" class="soso-search-input" name="searchName"
+					id="searchId" /> 
+					<input class="soso-search-submit" type="submit"
+					value="搜索"/>
+				</li>
+			</ul>
+
+			<ul id="tiezi-list" class="scroll-view post-list">
+
+
+				<li class="feeds-li feeds-li-normal"
+						onclick="location='meitu.html'">
+							<div class="detail-bottom">
+								<div class="img-wrap clearfix">
+										<img
+												src="img/3.jpg"
+												class=""
+												style="margin-left: 0px; margin-top: 0px; width: 100%; height: 100%;">
+								</div>
+								<div class="report-content">
+									<p class="grouptitle feed-two-line">
+										<span class="title">【美图教程】<br>人物美图 </span>
+									</p>
+									<br>
+								</div>
+							</div>
+					</li>
+
+				<li class="feeds-li feeds-li-normal"
+					onclick="location='lians.html'">
+					<div class="detail-bottom">
+						<div class="img-wrap clearfix">
+							<img
+										src="img/3.jpg"
+										class="tu"
+										style="margin-left: 0px; margin-top: 0px; width: 100%; height: 100%;">
+						</div>
+						<div class="report-content">
+							<p class="grouptitle feed-two-line">
+								<span class="title">【美图教程】<br>灯泡字 </span>
+							</p>
+							<br>
+						</div>
+					</div>
+				</li>
+
+				<li class="feeds-li feeds-li-normal"
+					onclick="location='fangzheng.html'">
+					<div class="detail-bottom">
+						<div class="img-wrap clearfix">
+							<img
+										src="img/3.jpg"
+										class=""
+										style="margin-left: 0px; margin-top: 0px; width: 100%; height: 100%;">
+						</div>
+						<div class="report-content">
+							<p class="grouptitle feed-two-line">
+								<span class="title">【美图教程】<br>方正人物 </span>
+							</p>
+							<br>
+						</div>
+					</div>
+				</li>
+
+				<li class="feeds-li feeds-li-normal"
+					onclick="location='biankuang.html'">
+					<div class="detail-bottom">
+						<div class="img-wrap clearfix">
+							<img
+									src="img/3.jpg"
+									class=""
+									style="margin-left: 0px; margin-top: 0px; width: 100%; height: 100%;">
+						</div>
+						<div class="report-content">
+							<p class="grouptitle feed-two-line">
+								<span class="title">【美图教程】<br>人物边框图 </span>
+							</p>
+							<br>
+						</div>
+					</div>
+				</li>
+
+				<li class="feeds-li feeds-li-normal"
+					onclick="location='daoying.html'">
+					<div class="detail-bottom">
+						<div class="img-wrap clearfix">
+							<img
+									src="img/3.jpg"
+									class=""
+									style="margin-left: 0px; margin-top: 0px; width: 100%; height: 100%;">
+						</div>
+						<div class="report-content">
+							<p class="grouptitle feed-two-line">
+								<span class="title">【美图教程】<br>人物倒影图 </span>
+							</p>
+							<br>
+						</div>
+					</div>
+				</li>
+
+				<li class="feeds-li feeds-li-normal"
+					onclick="location='xindian.html'">
+					<div class="detail-bottom">
+						<div class="img-wrap clearfix">
+							<img
+									src="img/3.jpg"
+									class=""
+									style="margin-left: 0px; margin-top: 0px; width: 100%; height: 100%;">
+						</div>
+						<div class="report-content">
+							<p class="grouptitle feed-two-line">
+								<span class="title">【美图教程】<br>心电图 </span>
+							</p>
+							<br>
+						</div>
+					</div>
+				</li>
+
+				<li class="feeds-li feeds-li-normal"
+					onclick="location='yueya.html'">
+					<div class="detail-bottom">
+						<div class="img-wrap clearfix">
+							<img
+									src="img/3.jpg"
+									class=""
+									style="margin-left: 0px; margin-top: 0px; width: 100%; height: 100%;">
+						</div>
+						<div class="report-content">
+							<p class="grouptitle feed-two-line">
+								<span class="title">【美图教程】<br>人物月牙图 </span>
+							</p>
+							<br>
+						</div>
+
+					</div>
+				</li>
+
+				<li class="feeds-li feeds-li-normal"
+					onclick="location='luhan.html'">
+					<div class="detail-bottom">
+						<div class="img-wrap clearfix">
+							<img
+									src="img/3.jpg"
+									class=""
+									style="margin-left: 0px; margin-top: 0px; width: 100%; height: 100%;">
+						</div>
+						<div class="report-content">
+							<p class="grouptitle feed-two-line">
+								<span class="title">【美图教程】<br>鹿晗音量图 </span>
+							</p>
+							<br>
+						</div>
+
+					</div>
+				</li>
+
+				<li class="feeds-li feeds-li-normal"
+					onclick="location='xingkong.html'">
+					<div class="detail-bottom">
+						<div class="img-wrap clearfix">
+							<img
+									src="img/3.jpg"
+									class=""
+									style="margin-left: 0px; margin-top: 0px; width: 100%; height: 100%;">
+						</div>
+						<div class="report-content">
+							<p class="grouptitle feed-two-line">
+								<span class="title">【美图教程】<br>星空人物 </span>
+							</p>
+							<br>
+						</div>
+					</div>
+				</li>
+
+				<li class="feeds-li feeds-li-normal"
+					onclick="location='beizi.html'">
+					<div class="detail-bottom">
+						<div class="img-wrap clearfix">
+							<img
+									src="img/3.jpg"
+									class=""
+									style="margin-left: 0px; margin-top: 0px; width: 100%; height: 100%;">
+						</div>
+						<div class="report-content">
+							<p class="grouptitle feed-two-line">
+								<span class="title">【美图教程】<br>星空杯子 </span>
+							</p>
+							<br>
+						</div>
+
+					</div>
+				</li>
+
+				<li class="feeds-li feeds-li-normal"
+					onclick="location='baiyechuang.html'">
+					<div class="detail-bottom">
+						<div class="img-wrap clearfix">
+							<img
+									src="img/3.jpg"
+									class=""
+									style="margin-left: 0px; margin-top: 0px; width: 100%; height: 100%;">
+						</div>
+						<div class="report-content">
+							<p class="grouptitle feed-two-line">
+								<span class="title">【美图教程】<br>人物百叶窗 </span>
+							</p>
+							<br>
+						</div>
+					</div>
+				</li>
+
+				<li class="feeds-li feeds-li-normal"
+					onclick="location='guangdie.html'">
+					<div class="detail-bottom">
+						<div class="img-wrap clearfix">
+							<img
+									src="img/3.jpg"
+									class=""
+									style="margin-left: 0px; margin-top: 0px; width: 100%; height: 100%;">
+						</div>
+						<div class="report-content">
+							<p class="grouptitle feed-two-line">
+								<span class="title">【美图教程】<br>手持光碟图 </span>
+							</p>
+							<br>
+
+						</div>
+					</div>
+				</li>
+
+				<li class="feeds-li feeds-li-normal"
+					onclick="location='tuyanquan.html'">
+					<div class="detail-bottom">
+						<div class="img-wrap clearfix">
+							<img
+									src="img/3.jpg"
+									class=""
+									style="margin-left: 0px; margin-top: 0px; width: 100%; height: 100%;">
+						</div>
+						<div class="report-content">
+							<p class="grouptitle feed-two-line">
+
+								<span class="title">【美图教程】<br>吐烟圈教程 </span>
+							</p>
+							<br>
+						</div>
+					</div>
+				</li>
+
+				<li class="feeds-li feeds-li-normal"
+					onclick="location='UFO.html'">
+					<div class="detail-bottom">
+						<div class="img-wrap clearfix">
+							<img
+									src="img/3.jpg"
+									class=""
+									style="margin-left: 0px; margin-top: 0px; width: 100%; height: 100%;">
+						</div>
+						<div class="report-content">
+							<p class="grouptitle feed-two-line">
+								<span class="title">【美图教程】<br>UFO </span>
+							</p>
+							<br>
+						</div>
+					</div>
+				</li>
+
+				<li class="feeds-li feeds-li-normal"
+					onclick="location='xiaoan.html'">
+					<div class="detail-bottom">
+						<div class="img-wrap clearfix">
+							<img
+									src="img/3.jpg"
+									class=""
+									style="margin-left: 0px; margin-top: 0px; width: 100%; height: 100%;">
+						</div>
+						<div class="report-content">
+							<p class="grouptitle feed-two-line">
+								<span class="title">【美图教程】<br>人物消散 </span>
+							</p><br>
+						</div>
+					</div>
+				</li>
+
+				<li class="feeds-li feeds-li-normal"
+					onclick="location='linghun.html'">
+					<div class="detail-bottom">
+						<div class="img-wrap clearfix">
+							<img
+									src="img/3.jpg"
+									class=""
+									style="margin-left: 0px; margin-top: 0px; width: 100%; height: 100%;">
+						</div>
+						<div class="report-content">
+							<p class="grouptitle feed-two-line">
+								<span class="title">【美图教程】<br>起死回生 </span>
+							</p><br>
+						</div>
+					</div>
+				</li>
+
+				<li class="feeds-li feeds-li-normal"
+					onclick="location='geci.html'">
+					<div class="detail-bottom">
+						<div class="img-wrap clearfix">
+							<img
+									src="img/3.jpg"
+									class=""
+									style="margin-left: 0px; margin-top: 0px; width: 100%; height: 100%;">
+						</div>
+						<div class="report-content">
+							<p class="grouptitle feed-two-line">
+								<span class="title">【美图教程】<br>人物歌词 </span>
+							</p><br>
+						</div>
+					</div>
+				</li>
+
+				<li class="feeds-li feeds-li-normal"
+					onclick="location='chuancha.html'">
+					<div class="detail-bottom">
+						<div class="img-wrap clearfix">
+							<img
+									src="img/3.jpg"
+									class=""
+									style="margin-left: 0px; margin-top: 0px; width: 100%; height: 100%;">
+						</div>
+						<div class="report-content">
+							<p class="grouptitle feed-two-line">
+								<span class="title">【美图教程】<br>人物穿插 </span>
+							</p><br>
+						</div>
+					</div>
+				</li>
+
+				<li class="feeds-li feeds-li-normal"
+					onclick="location='fuzi.html'">
+					<div class="detail-bottom">
+						<div class="img-wrap clearfix">
+							<img
+									src="img/3.jpg"
+									class=""
+									style="margin-left: 0px; margin-top: 0px; width: 100%; height: 100%;">
+						</div>
+						<div class="report-content">
+							<p class="grouptitle feed-two-line">
+								<span class="title">【美图教程】<br>人物复制教程 </span>
+							</p><br>
+						</div>
+					</div>
+				</li>
+
+				<li class="feeds-li feeds-li-normal"
+					onclick="location='huanlian.html'">
+					<div class="detail-bottom">
+						<div class="img-wrap clearfix">
+							<img
+									src="img/3.jpg"
+									class=""
+									style="margin-left: 0px; margin-top: 0px; width: 100%; height: 100%;">
+						</div>
+						<div class="report-content">
+							<p class="grouptitle feed-two-line">
+								<span class="title">【美图教程】<br>明星合影 </span>
+							</p><br>
+						</div>
+					</div>
+				</li>
+
+				<li class="feeds-li feeds-li-normal"
+					onclick="location='tianshi.html'">
+					<div class="detail-bottom">
+						<div class="img-wrap clearfix">
+							<img
+									src="img/3.jpg"
+									class=""
+									style="margin-left: 0px; margin-top: 0px; width: 100%; height: 100%;">
+						</div>
+						<div class="report-content">
+							<p class="grouptitle feed-two-line">
+								<span class="title">【美图教程】<br>天使翅膀 </span>
+							</p><br>
+						</div>
+					</div>
+				</li>
+
+				<li class="feeds-li feeds-li-normal"
+					onclick="location='feiliao.html'">
+					<div class="detail-bottom">
+						<div class="img-wrap clearfix">
+							<img
+									src="img/3.jpg"
+									class=""
+									style="margin-left: 0px; margin-top: 0px; width: 100%; height: 100%;">
+						</div>
+						<div class="report-content">
+							<p class="grouptitle feed-two-line">
+								<span class="title">【美图教程】<br>人物飞鸟 </span>
+							</p><br>
+						</div>
+					</div>
+				</li>
+
+				<li class="feeds-li feeds-li-normal"
+					onclick="location='yanjing.html'">
+					<div class="detail-bottom">
+						<div class="img-wrap clearfix">
+							<img
+									src="img/3.jpg"
+									class=""
+									style="margin-left: 0px; margin-top: 0px; width: 100%; height: 100%;">
+						</div>
+						<div class="report-content">
+							<p class="grouptitle feed-two-line">
+								<span class="title">【美图教程】<br>星空眼睛 </span>
+							</p><br>
+						</div>
+					</div>
+				</li>
+
+				<li class="feeds-li feeds-li-normal"
+					onclick="location='tengtiao.html'">
+					<div class="detail-bottom">
+						<div class="img-wrap clearfix">
+							<img
+									src="img/3.jpg"
+									class=""
+									style="margin-left: 0px; margin-top: 0px; width: 100%; height: 100%;">
+						</div>
+						<div class="report-content">
+							<p class="grouptitle feed-two-line">
+								<span class="title">【美图教程】<br>人物藤条 </span>
+							</p><br>
+						</div>
+					</div>
+				</li>
+
+				<li class="feeds-li feeds-li-normal"
+					onclick="location='xingkongzi.html'">
+					<div class="detail-bottom">
+						<div class="img-wrap clearfix">
+							<img
+									src="img/3.jpg"
+									class=""
+									style="margin-left: 0px; margin-top: 0px; width: 100%; height: 100%;">
+						</div>
+						<div class="report-content">
+							<p class="grouptitle feed-two-line">
+								<span class="title">【美图教程】<br>星空字 </span>
+							</p><br>
+						</div>
+					</div>
+				</li>
+
+				<li class="feeds-li feeds-li-normal"
+					onclick="location='shouzhangzhui.html'">
+					<div class="detail-bottom">
+						<div class="img-wrap clearfix">
+							<img
+									src="img/3.jpg"
+									class=""
+									style="margin-left: 0px; margin-top: 0px; width: 100%; height: 100%;">
+						</div>
+						<div class="report-content">
+							<p class="grouptitle feed-two-line">
+								<span class="title">【美图教程】<br>手长嘴教程 </span>
+							</p><br>
+						</div>
+					</div>
+				</li>
+
+				<li class="feeds-li feeds-li-normal"
+					onclick="location='menghuan.html'">
+					<div class="detail-bottom">
+						<div class="img-wrap clearfix">
+							<img
+									src="img/3.jpg"
+									class=""
+									style="margin-left: 0px; margin-top: 0px; width: 100%; height: 100%;">
+						</div>
+						<div class="report-content">
+							<p class="grouptitle feed-two-line">
+								<span class="title">【美图教程】<br>梦幻人物 </span>
+							</p><br>
+						</div>
+					</div>
+				</li>
+
+				<li class="feeds-li feeds-li-normal"
+					onclick="location='zhizhu.html'">
+					<div class="detail-bottom">
+						<div class="img-wrap clearfix">
+							<img
+									src="img/3.jpg"
+									class=""
+									style="margin-left: 0px; margin-top: 0px; width: 100%; height: 100%;">
+						</div>
+						<div class="report-content">
+							<p class="grouptitle feed-two-line">
+								<span class="title">【美图教程】<br>蜘蛛网 </span>
+							</p><br>
+						</div>
+					</div>
+				</li>
+
+				<li class="feeds-li feeds-li-normal"
+					onclick="location='xuanwo.html'">
+					<div class="detail-bottom">
+						<div class="img-wrap clearfix">
+							<img
+									src="img/3.jpg"
+									class=""
+									style="margin-left: 0px; margin-top: 0px; width: 100%; height: 100%;">
+						</div>
+						<div class="report-content">
+							<p class="grouptitle feed-two-line">
+								<span class="title">【美图教程】<br>旋涡人物 </span>
+							</p><br>
+						</div>
+					</div>
+				</li>
+
+				<li class="feeds-li feeds-li-normal"
+					onclick="location='xi.html'">
+					<div class="detail-bottom">
+						<div class="img-wrap clearfix">
+							<img
+									src="img/3.jpg"
+									class=""
+									style="margin-left: 0px; margin-top: 0px; width: 100%; height: 100%;">
+						</div>
+						<div class="report-content">
+							<p class="grouptitle feed-two-line">
+								<span class="title">【美图教程】<br>吸星大法 </span>
+							</p><br>
+						</div>
+					</div>
+				</li>
+
+				<li class="feeds-li feeds-li-normal"
+					onclick="location='dongman.html'">
+					<div class="detail-bottom">
+						<div class="img-wrap clearfix">
+							<img
+									src="img/3.jpg"
+									class=""
+									style="margin-left: 0px; margin-top: 0px; width: 100%; height: 100%;">
+						</div>
+						<div class="report-content">
+							<p class="grouptitle feed-two-line">
+								<span class="title">【美图教程】<br>人物转星空动漫 </span>
+							</p><br>
+						</div>
+					</div>
+				</li>
+
+				<li class="feeds-li feeds-li-normal"
+					onclick="location='sediao.html'">
+					<div class="detail-bottom">
+						<div class="img-wrap clearfix">
+							<img
+									src="img/3.jpg"
+									class=""
+									style="margin-left: 0px; margin-top: 0px; width: 100%; height: 100%;">
+						</div>
+						<div class="report-content">
+							<p class="grouptitle feed-two-line">
+								<span class="title">【美图教程】<br>人物色调图 </span>
+							</p><br>
+						</div>
+					</div>
+				</li>
+
+				<li class="feeds-li feeds-li-normal"
+					onclick="location='biaoqing.html'">
+					<div class="detail-bottom">
+						<div class="img-wrap clearfix">
+							<img
+									src="img/3.jpg"
+									class=""
+									style="margin-left: 0px; margin-top: 0px; width: 100%; height: 100%;">
+						</div>
+						<div class="report-content">
+							<p class="grouptitle feed-two-line">
+								<span class="title">【美图教程】<br>表情包 </span>
+							</p><br>
+						</div>
+					</div>
+				</li>
+
+				<li class="feeds-li feeds-li-normal"
+					onclick="location='zhedang.html'">
+					<div class="detail-bottom">
+						<div class="img-wrap clearfix">
+							<img
+									src="img/3.jpg"
+									class=""
+									style="margin-left: 0px; margin-top: 0px; width: 100%; height: 100%;">
+						</div>
+						<div class="report-content">
+							<p class="grouptitle feed-two-line">
+								<span class="title">【美图教程】<br>人脸遮挡</span>
+							</p><br>
+						</div>
+					</div>
+				</li>
+
+				<li class="feeds-li feeds-li-normal"
+					onclick="location='tankuang.html'">
+					<div class="detail-bottom">
+						<div class="img-wrap clearfix">
+							<img
+									src="img/3.jpg"
+									class=""
+									style="margin-left: 0px; margin-top: 0px; width: 100%; height: 100%;">
+						</div>
+						<div class="report-content">
+							<p class="grouptitle feed-two-line">
+								<span class="title">【美图教程】<br>清新弹框 </span>
+							</p><br>
+						</div>
+					</div>
+				</li>
+
+				<li class="feeds-li feeds-li-normal"
+					onclick="location='shouji.html'">
+					<div class="detail-bottom">
+						<div class="img-wrap clearfix">
+							<img
+									src="img/3.jpg"
+									class=""
+									style="margin-left: 0px; margin-top: 0px; width: 100%; height: 100%;">
+						</div>
+						<div class="report-content">
+							<p class="grouptitle feed-two-line">
+								<span class="title">【美图教程】<br>手机贴图 </span>
+							</p><br>
+						</div>
+					</div>
+				</li>
+
+				<li class="feeds-li feeds-li-normal"
+					onclick="location='ps.html'">
+					<div class="detail-bottom">
+						<div class="img-wrap clearfix">
+							<img
+									src="img/3.jpg"
+									class=""
+									style="margin-left: 0px; margin-top: 0px; width: 100%; height: 100%;">
+						</div>
+						<div class="report-content">
+							<p class="grouptitle feed-two-line">
+								<span class="title">【美图教程】<br>ps弹框 </span>
+							</p>
+							<br>
+						</div>
+					</div>
+				</li>
+
+				<li class="feeds-li feeds-li-normal"
+					onclick="location='rose.html'">
+					<div class="detail-bottom">
+						<div class="img-wrap clearfix">
+							<img
+									src="img/3.jpg"
+									class=""
+									style="margin-left: 0px; margin-top: 0px; width: 100%; height: 100%;">
+						</div>
+						<div class="report-content">
+							<p class="grouptitle feed-two-line">
+								<span class="title">【美图教程】<br>玫瑰人物 </span>
+							</p><br>
+						</div>
+					</div>
+				</li>
+
+				<li class="feeds-li feeds-li-normal"
+					onclick="location='lian.html'">
+					<div class="detail-bottom">
+						<div class="img-wrap clearfix">
+							<img
+									src="img/3.jpg"
+									class=""
+									style="margin-left: 0px; margin-top: 0px; width: 100%; height: 100%;">
+						</div>
+						<div class="report-content">
+							<p class="grouptitle feed-two-line">
+								<span class="title">【美图教程】<br>透明人脸 </span>
+							</p><br>
+						</div>
+					</div>
+				</li>
+
+				<li class="feeds-li feeds-li-normal"
+					onclick="location='shilie.html'">
+					<div class="detail-bottom">
+						<div class="img-wrap clearfix">
+							<img
+									src="img/3.jpg"
+									class=""
+									style="margin-left: 0px; margin-top: 0px; width: 100%; height: 100%;">
+						</div>
+						<div class="report-content">
+							<p class="grouptitle feed-two-line">
+								<span class="title">【美图教程】<br>撕裂图 </span>
+							</p><br>
+						</div>
+				</li>
+
+				<li class="feeds-li feeds-li-normal"
+					onclick="location='huazhonghua.html'">
+					<div class="detail-bottom">
+						<div class="img-wrap clearfix">
+							<img
+									src="img/3.jpg"
+									class=""
+									style="margin-left: 0px; margin-top: 0px; width: 100%; height: 100%;">
+						</div>
+						<div class="report-content">
+							<p class="grouptitle feed-two-line">
+								<span class="title">【美图教程】<br>手机画中画 </span>
+							</p><br>
+						</div>
+					</div>
+				</li>
+
+				<li class="feeds-li feeds-li-normal"
+					onclick="location='mengban.html'">
+					<div class="detail-bottom">
+						<div class="img-wrap clearfix">
+							<img
+									src="img/3.jpg"
+									class=""
+									style="margin-left: 0px; margin-top: 0px; width: 100%; height: 100%;">
+						</div>
+						<div class="report-content">
+							<p class="grouptitle feed-two-line">
+								<span class="title">【美图教程】<br>清新蒙版 </span>
+							</p><br>
+						</div>
+					</div>
+				</li>
+
+				<li class="feeds-li feeds-li-normal"
+					onclick="location='wenzi.html'">
+					<div class="detail-bottom">
+						<div class="img-wrap clearfix">
+							<img
+									src="img/3.jpg"
+									class=""
+									style="margin-left: 0px; margin-top: 0px; width: 100%; height: 100%;">
+						</div>
+						<div class="report-content">
+							<p class="grouptitle feed-two-line">
+								<span class="title">【美图教程】<br>人脸文字 </span>
+							</p><br>
+						</div>
+					</div>
+				</li>
+
+				<li class="feeds-li feeds-li-normal"
+					onclick="location='subiao.html'">
+					<div class="detail-bottom">
+						<div class="img-wrap clearfix">
+							<img
+									src="img/3.jpg"
+									class=""
+									style="margin-left: 0px; margin-top: 0px; width: 100%; height: 100%;">
+						</div>
+						<div class="report-content">
+							<p class="grouptitle feed-two-line">
+								<span class="title">【美图教程】<br>鼠标人物 </span>
+							</p><br>
+						</div>
+					</div>
+				</li>
+
+				<li class="feeds-li feeds-li-normal"
+					onclick="location='hudie.html'">
+					<div class="detail-bottom">
+						<div class="img-wrap clearfix">
+							<img
+									src="img/3.jpg"
+									class=""
+									style="margin-left: 0px; margin-top: 0px; width: 100%; height: 100%;">
+						</div>
+						<div class="report-content">
+							<p class="grouptitle feed-two-line">
+								<span class="title">【美图教程】<br>蝴蝶人物 </span>
+							</p><br>
+						</div>
+					</div>
+				</li>
+
+				<li class="feeds-li feeds-li-normal"
+					onclick="location='yundong.html'">
+					<div class="detail-bottom">
+						<div class="img-wrap clearfix">
+							<img
+									src="img/3.jpg"
+									class=""
+									style="margin-left: 0px; margin-top: 0px; width: 100%; height: 100%;">
+						</div>
+						<div class="report-content">
+							<p class="grouptitle feed-two-line">
+								<span class="title">【美图教程】<br>运动轨迹 </span>
+							</p><br>
+						</div>
+					</div>
+				</li>
+
+				<li class="feeds-li feeds-li-normal"
+					onclick="location='duobianxin.html'">
+					<div class="detail-bottom">
+
+						<div class="img-wrap clearfix">
+							<img
+									src="img/3.jpg"
+									class=""
+									style="margin-left: 0px; margin-top: 0px; width: 100%; height: 100%;">
+						</div>
+						<div class="report-content">
+							<p class="grouptitle feed-two-line">
+								<span class="title">【美图教程】<br>多边形人物 </span>
+							</p><br>
+						</div>
+					</div>
+				</li>
+
+				<li class="feeds-li feeds-li-normal"
+					onclick="location='suicai.html'">
+					<div class="img-wrap clearfix">
+						<img
+								src="img/3.jpg"
+								class=""
+								style="margin-left: 0px; margin-top: 0px; width: 100%; height: 100%;">
+					</div>
+					<div class="detail-bottom">
+						<div class="report-content">
+							<p class="grouptitle feed-two-line">
+								<span class="title">【美图教程】<br>水彩背景 </span>
+							</p><br>
+						</div>
+					</div>
+				</li>
+
+				<li class="feeds-li feeds-li-normal"
+					onclick="location='congyin.html'">
+					<div class="img-wrap clearfix">
+						<img
+								src="img/3.jpg"
+								class=""
+								style="margin-left: 0px; margin-top: 0px; width: 100%; height: 100%;">
+					</div>
+					<div class="detail-bottom">
+						<div class="report-content">
+							<p class="grouptitle feed-two-line">
+								<span class="title">【美图教程】<br>多重重影 </span>
+							</p><br>
+						</div>
+					</div>
+				</li>
+
+				<li class="feeds-li feeds-li-normal"
+					onclick="location='souci.html'">
+					<div class="detail-bottom">
+						<div class="img-wrap clearfix">
+							<img
+									src="img/3.jpg"
+									class=""
+									style="margin-left: 0px; margin-top: 0px; width: 100%; height: 100%;">
+						</div>
+						<div class="report-content">
+							<p class="grouptitle feed-two-line">
+								<span class="title">【美图教程】<br>手持星空图 </span>
+							</p>
+							<br>
+						</div>
+					</div>
+				</li>
+
+				<li class="feeds-li feeds-li-normal"
+					onclick="location='jianpan.html'">
+					<div class="detail-bottom">
+						<div class="img-wrap clearfix">
+							<img
+									src="img/3.jpg"
+									class=""
+									style="margin-left: 0px; margin-top: 0px; width: 100%; height: 100%;">
+						</div>
+						<div class="report-content">
+							<p class="grouptitle feed-two-line">
+								<span class="title">【美图教程】<br>清新键盘图 </span>
+							</p><br>
+						</div>
+					</div>
+				</li>
+
+				<li class="feeds-li feeds-li-normal"
+					onclick="location='gezi.html'">
+					<div class="detail-bottom">
+						<div class="img-wrap clearfix">
+							<img
+									src="img/3.jpg"
+									class=""
+									style="margin-left: 0px; margin-top: 0px; width: 100%; height: 100%;">
+
+						</div>
+						<div class="report-content">
+							<p class="grouptitle feed-two-line">
+								<span class="title">【美图教程】<br>清新格子人物 </span>
+							</p><br>
+						</div>
+					</div>
+				</li>
+
+				<li class="feeds-li feeds-li-normal"
+					onclick="location='renwu.html'">
+					<div class="detail-bottom">
+						<div class="img-wrap clearfix">
+							<img
+									src="img/3.jpg"
+									class=""
+									style="margin-left: 0px; margin-top: 0px; width: 100%; height: 100%;">
+						</div>
+						<div class="report-content">
+							<p class="grouptitle feed-two-line">
+								<span class="title">【美图教程】<br>手机立体人物 </span>
+							</p><br>
+						</div>
+
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

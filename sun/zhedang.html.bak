@@ -1,0 +1,49 @@
+																																	   								   																																	  												 																				  															   <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="cache-control" content="max-age=0">
+		<meta http-equiv="cache-control" content="no-cache">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+		<meta name="format-detection" content="telephone=no">	
+		<link rel="stylesheet" href="https://pub.idqqimg.com/qqun/xiaoqu/mobile/css/common.min.fd126e84.css">
+		<link rel="stylesheet" href="https://pub.idqqimg.com/qqun/xiaoqu/mobile/css/detail.min.fcb39333.css">
+		<title>话题</title>
+		<link href="https://imgcache.qq.com/tencentvideo_v1/tvp/js/tvp.player_v2_zepto.js" rel="preload">
+		<style></style>
+	</head>
+	<body class="android v2">
+		<div id="root">
+			<div data-reactroot="">
+				<div id="post_top_container" class="with-download-button post_800">
+					<div class="post-wrapper">
+						<center>
+						<div class="postarray-item">
+								<div class="post-content allow-copy" style="color:red; font-size:30px;">【美图教程】人脸遮挡<p></p>
+								</div>
+								<div class="post-content allow-copy" style="font-size:30px;">我是全能小太阳<p></p>
+								</div>
+								<div class="post-content allow-copy">喜欢我们的教程<p class="ph"></p>记得五星好评<p class="ph"></p>
+								</div>
+						</div>
+						</center>
+						<div class="postarray-item">
+								<div class="img-box-wrapper">
+									<div class="img-box" style="width: 361px; height: 361px;">
+										<img src="img/3.jpg" class="">
+									</div>
+								</div>
+						</div>
+						<div class="postarray-item">
+								<div class="img-box-wrapper">
+									<div class="img-box" style="width: 361px;">
+										<img src="img/教程30.jpg" class="">
+									</div>
+								</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
